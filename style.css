@@ -43,6 +43,8 @@ html {
     background: #3e3e3e;
     user-select: none;
     padding: 25px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 #messages {
     display: flex;
