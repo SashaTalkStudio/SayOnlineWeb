@@ -1,5 +1,15 @@
 html {
     overflow: hidden;
+    cursor: default;
+    background: #222;
+    color: white;
+}
+input {
+    background-color: #222;
+    color: white;
+}
+* {
+    font-family: "Segoe UI";
 }
 .container {
     display: flex;
