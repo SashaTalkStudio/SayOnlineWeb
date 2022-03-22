@@ -4,6 +4,9 @@ html {
     background: #222;
     color: white;
 }
+body {
+    margin: 0px;
+}
 input {
     background-color: #222;
     color: white;
@@ -13,7 +16,7 @@ input {
 }
 .container {
     display: flex;
-    height: 98vh;
+    height: 100vh;
 }
 .left_column {
     display: flex;
