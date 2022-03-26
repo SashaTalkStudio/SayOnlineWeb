@@ -24,6 +24,7 @@ input {
     width: 20vw;
     flex-direction: column;
     background: #333;
+    z-index: -999;
 }
 .chat {
     user-select: none;
@@ -45,13 +46,15 @@ input {
 }
 .main_column {
     width: 80vw;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
 #head {
     background: #3a3a3a;
     user-select: none;
-    padding: 25px;
+    display: flex;
+    justify-content: space-between;
 }
 .logo {
     background: #3e3e3e;
@@ -178,12 +181,44 @@ input {
     border-radius: 50px;
     user-select: none;
 }
+#chatname {
+    padding: 25px;
+}
+.close_chat {
+    display: none;
+}
 @media only screen and (hover: none) and (pointer: coarse) {
     .left_column {
         width: 100vw;
     }
     .main_column {
-        width: 0px;
+        background: #222;
+        width: 100vw;
+    }
+    .mob_hidden {
         display: none;
+    }
+    #messages {
+        padding: 10px;
+    }
+    .close_chat {
+        display: unset;
+    }
+    .slidein {
+        position: absolute;
+        animation-duration: 500ms;
+        animation-name: slide;
+    }
+    @keyframes slide {
+        from {
+            position: absolute;
+            background-color: #222;
+            left: 100vw;
+        }
+        to {
+            position: absolute;
+            background-color: #222;
+            left: 0px;
+        }
     }
 }

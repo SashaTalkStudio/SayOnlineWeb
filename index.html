@@ -5,19 +5,23 @@
         <title>Say Online Web</title>
         <meta name="viewport" content="width=device-width" initial-scale="1.0">
         <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
     </head>
     <body>
         <div class="container">
-            <div class="left_column">
+            <div class="left_column" id="left_column">
                 <div class="logo">Say Online</div>
                 <div id="chats">
-                    <div class="chat">Global Chat</div>
+                    <div class="chat" onclick="chat_click()">Global Chat</div>
                 </div>
                 <div class="chat">Add chat</div>
                 <div class="chat">Settings</div>
             </div>
-            <div class="main_column">
-                <div id="head">Global Chat</div>
+            <div class="main_column mob_hidden slidein" id="main_column">
+                <div id="head">
+                    <div id="chatname">Global Chat</div>
+                    <div class="chat close_chat" onclick="chat_close()">Close chat</div>
+                </div>
                 <div id="messages">
                     <div class="date_container" id="15.3.2022">
                         <div class="date">15.3.2022</div>
