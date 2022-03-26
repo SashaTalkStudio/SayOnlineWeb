@@ -16,7 +16,8 @@ input {
 }
 .container {
     display: flex;
-    height: 100vh;
+    height: 100%;
+    position: fixed;
 }
 .left_column {
     display: flex;
@@ -176,4 +177,13 @@ input {
     padding-right: 10px;
     border-radius: 50px;
     user-select: none;
+}
+@media only screen and (hover: none) and (pointer: coarse) {
+    .left_column {
+        width: 100vw;
+    }
+    .main_column {
+        width: 0px;
+        display: none;
+    }
 }
