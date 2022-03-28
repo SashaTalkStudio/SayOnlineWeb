@@ -131,15 +131,18 @@ input {
     background: #333;
     padding: 10px;
     border-radius: 20px;
+    margin: 5px;
 }
 .mymessagecell {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    overflow-wrap: break-word;
 }
 .messagecell {
     display: flex;
     align-items: center;
+    overflow-wrap: break-word;
 }
 .time {
     color: #888;
