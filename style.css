@@ -207,9 +207,15 @@ input {
     .slidein {
         position: absolute;
         animation-duration: 500ms;
-        animation-name: slide;
+        animation-name: slidein;
     }
-    @keyframes slide {
+    .slideout {
+        position: absolute;
+        animation-duration: 500ms;
+        animation-name: slideout;
+        left: 100vw;
+    }
+    @keyframes slidein {
         from {
             position: absolute;
             background-color: #222;
@@ -219,6 +225,18 @@ input {
             position: absolute;
             background-color: #222;
             left: 0px;
+        }
+    }
+    @keyframes slideout {
+        from {
+            position: absolute;
+            background-color: #222;
+            left: 0px;
+        }
+        to {
+            position: absolute;
+            background-color: #222;
+            left: 100vw;
         }
     }
 }
