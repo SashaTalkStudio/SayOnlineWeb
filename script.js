@@ -1,4 +1,5 @@
 var count = 2 // just for demonstration
+var currdate = "15.03.2022" // just for demonstration
 chat_click = function() {
     document.getElementById("main_column").classList.remove("slideout");
     document.getElementById("main_column").classList.remove("mob_hidden");
@@ -7,6 +8,10 @@ chat_close = function() {
     document.getElementById("main_column").classList.add("slideout");
 }
 send = function() {
+    if (currdate != getcurrdate()) {
+        document.getElementById("messages").innerHTML = document.getElementById("messages").innerHTML + '<div class="date_container" id="' + getcurrdate() + '"><div class="date">' + getcurrdate() + '</div></div>'
+    }
+    currdate = getcurrdate()
     if ( document.getElementById("input").value.length != 0 ) {
         count = count + 1
         document.getElementById("messages").innerHTML = document.getElementById("messages").innerHTML + '<div class="mymessagecell" id="msg' + count + '"><div class="message">' + document.getElementById("input").value + '</div><div class="time">' + lss0(new Date().getHours()) + ":" + lss0(new Date().getMinutes()) + '</div><div class="msg_tools"><button class="msg_tools_delete" onclick="delmsg(\'' + count + '\')">Delete</button></div></div>'
@@ -30,4 +35,7 @@ lss0 = function(_time) {
         _time = "0" + _time
     }
     return (_time)
+}
+getcurrdate = function() {
+    return lss0((new Date).getDate()) + "." + lss0((new Date).getMonth() + 1) + "." + ((new Date).getYear() + 1900)
 }
