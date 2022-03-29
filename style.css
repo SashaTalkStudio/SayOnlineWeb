@@ -166,6 +166,7 @@ input {
     outline: none;
     color: #888;
     padding: 0px;
+    user-select: none;
 }
 .messagesender {
     color: #888;
