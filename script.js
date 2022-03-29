@@ -9,16 +9,19 @@ chat_close = function() {
 send = function() {
     if ( document.getElementById("input").value.length != 0 ) {
         count = count + 1
-        document.getElementById("messages").innerHTML = document.getElementById("messages").innerHTML + '<div class="mymessagecell" id="msg' + count + '"><div class="message">' + document.getElementById("input").value + '</div><div class="time">' + new Date().getHours() + ":" + new Date().getMinutes() + '</div><div class="msg_tools"><button class="msg_tools_delete">Delete</button></div></div>'
+        document.getElementById("messages").innerHTML = document.getElementById("messages").innerHTML + '<div class="mymessagecell" id="msg' + count + '"><div class="message">' + document.getElementById("input").value + '</div><div class="time">' + new Date().getHours() + ":" + new Date().getMinutes() + '</div><div class="msg_tools"><button class="msg_tools_delete" onclick="delmsg(\'' + count + '\')">Delete</button></div></div>'
         document.getElementById("input").value = ""
         document.getElementById("messages").scrollTop = document.getElementById("messages").scrollHeight;
     }
 }
-var onpageload = function() {
+onpageload = function() {
     var input = document.getElementById("input")
     input.addEventListener("keyup", function(event) {
         if (event.keyCode === 13) {
             document.getElementById("send").click();
         }
     });
+}
+delmsg = function(n) {
+    document.getElementById("msg" + n).remove()
 }
