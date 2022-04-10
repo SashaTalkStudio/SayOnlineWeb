@@ -132,6 +132,7 @@ input {
     padding: 10px;
     border-radius: 20px;
     margin: 5px;
+    min-width: 0;
 }
 .mymessagecell {
     display: flex;
