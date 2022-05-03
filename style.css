@@ -24,7 +24,6 @@ input {
     width: 20vw;
     flex-direction: column;
     background: #333;
-    z-index: -999;
 }
 .chat {
     user-select: none;
