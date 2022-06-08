@@ -1,59 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Say Online Web</title>
         <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <meta name="author" content="Sasha Talk">
+        <meta name="description" content="Say Online">
+
+        <title>Say Online Web</title>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
     </head>
     <body>
-        <div class="container">
+        
+        <main class="container">
+
             <div class="left_column" id="left_column">
                 <div class="logo">Say Online</div>
+
                 <div id="chats">
                     <div class="chat" onclick="chat_click()">Global Chat</div>
+
                 </div>
+                
                 <div class="chat">Add chat</div>
                 <div class="chat">Settings</div>
             </div>
+
             <div class="main_column mob_hidden slidein" id="main_column">
+
                 <div id="head">
                     <div id="chatname">Global Chat</div>
                     <div class="chat close_chat" onclick="chat_close()">Close chat</div>
                 </div>
+
                 <div id="messages">
+
                     <div class="date_container" id="15.03.2022">
                         <div class="date">15.03.2022</div>
                     </div>
 
                     <div class="mymessagecell" id="msg1">
+
                         <div class="message">
                             Hello, World!
+                            <time>19:25</time>
                         </div>
-                        <div class="time">19:25</div>
+
                         <div class="msg_tools">
                             <button class="msg_tools_delete" onclick="delmsg(1)">Delete</button>
                         </div>
+
                     </div>
 
                     <div class="messagecell" id="msg2">
                         <div class="message">
                             <div class="messagesender">someone</div>
                             Hi, how are you?
+                            <time>19:26</time>
                         </div>
-                        <div class="time">19:26</div>
+
                         <div class="msg_tools">
-                            <button class="msg_tools_delete" onclick="delmsg(2)">Delete</button>
+                                <button class="msg_tools_delete" onclick="delmsg(2)">Delete</button>
                         </div>
                     </div>
+
                 </div>
+
                 <div class="input_container">
                     <input id="input" placeholder="Type a message">
                     <button id="send" onclick="send()">Send</button>
                 </div>
+
             </div>
-        </div>
-        <script>onpageload()</script>
+
+        </main>
+
+        <script src="script.js"></script>
     </body>
 </html>
