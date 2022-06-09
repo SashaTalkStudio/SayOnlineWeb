@@ -1,10 +1,9 @@
 // just for demonstration
-let count = 2
-let currdate = "15.03.2022"
-
-let messages = document.getElementById("messages")
-let sendbutton = document.getElementById("send")
-let input = document.getElementById("input")
+count = 2
+currdate = "15.03.2022"
+messages = document.getElementById("messages")
+sendbutton = document.getElementById("send")
+input = document.getElementById("input")
 
 input.addEventListener("keyup", event => {
     if (event.keyCode === 13) {
