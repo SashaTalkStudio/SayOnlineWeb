@@ -2,13 +2,13 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Say Online Web</title>
         <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <meta name="description" content="Send messages in Say Online from this web app.">
+        <title>Say Online Web</title>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
     </head>
     <body>
-        <div class="container">
+        <main class="container">
             <div class="left_column" id="left_column">
                 <div class="logo">Say Online</div>
                 <div id="chats">
@@ -26,23 +26,21 @@
                     <div class="date_container" id="15.03.2022">
                         <div class="date">15.03.2022</div>
                     </div>
-
                     <div class="mymessagecell" id="msg1">
                         <div class="message">
                             Hello, World!
+                            <time>19:25</time>
                         </div>
-                        <div class="time">19:25</div>
                         <div class="msg_tools">
                             <button class="msg_tools_delete" onclick="delmsg(1)">Delete</button>
                         </div>
                     </div>
-
                     <div class="messagecell" id="msg2">
                         <div class="message">
                             <div class="messagesender">someone</div>
                             Hi, how are you?
+                            <time>19:26</time>
                         </div>
-                        <div class="time">19:26</div>
                         <div class="msg_tools">
                             <button class="msg_tools_delete" onclick="delmsg(2)">Delete</button>
                         </div>
@@ -53,7 +51,7 @@
                     <button id="send" onclick="send()">Send</button>
                 </div>
             </div>
-        </div>
-        <script>onpageload()</script>
+        </main>
+        <script src="script.js"></script>
     </body>
 </html>
