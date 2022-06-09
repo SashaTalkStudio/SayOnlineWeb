@@ -6,7 +6,7 @@ let messages = document.getElementById("messages")
 let sendbutton = document.getElementById("send")
 let input = document.getElementById("input")
 
-input.addEventListener("keyup", event=> {
+input.addEventListener("keyup", event => {
     if (event.keyCode === 13) {
         send()
     }
