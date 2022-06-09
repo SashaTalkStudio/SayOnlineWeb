@@ -28,6 +28,7 @@ function send() {
         currdate = getcurrdate()
 
         count = count + 1
+        // prevention of html code injection
         let re = /</gi;
         let mess = input.value.replace(re, "&lt;")
         messages.innerHTML += `<div class="mymessagecell" id="msg${count}"><div class="message">${mess}<time>${getcurrtime()}</time></div>${initmsgtools(count)}</div>`
