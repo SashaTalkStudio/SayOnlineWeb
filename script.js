@@ -1,3 +1,4 @@
+// just for demonstration
 let count = 2
 let currdate = "15.03.2022"
 let messages = document.getElementById("messages")
